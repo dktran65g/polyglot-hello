@@ -1,0 +1,458 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8168af84-6402-4f6c-b336-f8da63b1fa0e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-04-02T23:38:03-04:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-gomod",
+        "version": "v1.10.0",
+        "hashes": [
+          {
+            "alg": "MD5",
+            "content": "bb4b68ab86536fbc9b5e53f4649679e1"
+          },
+          {
+            "alg": "SHA-1",
+            "content": "9c577232d56c6519fbba6f495740b73863bfa4cd"
+          },
+          {
+            "alg": "SHA-256",
+            "content": "90056aaca4cc5fb2945bae06c9e53c23a4d2f41f4863566af5fecae4d0dfed99"
+          },
+          {
+            "alg": "SHA-384",
+            "content": "0f30d7abecae02a15c01dfc7ba4b46334b3b816733c9120c81abd333f9a3aa3bf83dcc21f5705d93b4b9d3fda0ee4bd0"
+          },
+          {
+            "alg": "SHA-512",
+            "content": "2bd36c591254242ebeebfa8fc8c44aec7300063b0d7966d61965619032daad286f9a9336b092c162f485c8ef01c455a8918a8ea291cf3543f353a3f9206ea5e0"
+          }
+        ],
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-gomod",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:golang/github.com/polyglot-hello@v0.0.0-20260403033242-0b95854f1c8d?type=module",
+      "type": "application",
+      "name": "github.com/polyglot-hello",
+      "version": "v0.0.0-20260403033242-0b95854f1c8d",
+      "purl": "pkg:golang/github.com/polyglot-hello@v0.0.0-20260403033242-0b95854f1c8d?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/polyglot-hello",
+          "type": "vcs"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/github.com/KyleBanks/depth@v1.2.1?type=module",
+      "type": "library",
+      "name": "github.com/KyleBanks/depth",
+      "version": "v1.2.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e61f1f4000c5ad6b5aad376d0ee74c986b02ec63db380bba4550777dfb151477"
+        }
+      ],
+      "purl": "pkg:golang/github.com/KyleBanks/depth@v1.2.1?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/KyleBanks/depth",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module",
+      "type": "library",
+      "name": "github.com/go-openapi/jsonpointer",
+      "version": "v0.19.5",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "819afe088601c94aa372078b5e742eda01d8402f68ef71b65d478e1581080ae6"
+        }
+      ],
+      "purl": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/go-openapi/jsonpointer",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?type=module",
+      "type": "library",
+      "name": "github.com/go-openapi/jsonreference",
+      "version": "v0.20.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31896ed2c0600a19827c9c7150a67c83570f585381dfb61266a7b02bb38a7b20"
+        }
+      ],
+      "purl": "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/go-openapi/jsonreference",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/spec@v0.20.6?type=module",
+      "type": "library",
+      "name": "github.com/go-openapi/spec",
+      "version": "v0.20.6",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "89c875450dd60db7e8793a9301bfb9108c4d9a929525958135a87d4404f48c84"
+        }
+      ],
+      "purl": "pkg:golang/github.com/go-openapi/spec@v0.20.6?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/go-openapi/spec",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+      "type": "library",
+      "name": "github.com/go-openapi/swag",
+      "version": "v0.19.15",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0f6351081cd2f7fa4463780ff4d97c683a8651c3c5af01b6a7e08d16b2f2ac23"
+        }
+      ],
+      "purl": "pkg:golang/github.com/go-openapi/swag@v0.19.15?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/go-openapi/swag",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/josharian/intern@v1.0.0?type=module",
+      "type": "library",
+      "name": "github.com/josharian/intern",
+      "version": "v1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "be54b8cf9e2849d8e6d1b823462808f86d47a45fad23ef6b1392cbcce83c1e66"
+        }
+      ],
+      "purl": "pkg:golang/github.com/josharian/intern@v1.0.0?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/josharian/intern",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module",
+      "type": "library",
+      "name": "github.com/mailru/easyjson",
+      "version": "v0.7.6",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f324c85676600a888cd5382aa1e4e5f8b7d4e4983aff12f74211909e298b6270"
+        }
+      ],
+      "purl": "pkg:golang/github.com/mailru/easyjson@v0.7.6?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/mailru/easyjson",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/polyglot-hello/packages/go-greeter@v0.0.0-20260403033242-0b95854f1c8d?type=module",
+      "type": "library",
+      "name": "github.com/polyglot-hello/packages/go-greeter",
+      "version": "v0.0.0-20260403033242-0b95854f1c8d",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "10f3540a0b183ef31cceb341d11ffaf1ea1e2a80588d928fd96cb9d68bda648d"
+        }
+      ],
+      "purl": "pkg:golang/github.com/polyglot-hello/packages/go-greeter@v0.0.0-20260403033242-0b95854f1c8d?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/polyglot-hello/packages/go-greeter",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/swaggo/files@v0.0.0-20220610200504-28940afbdbfe?type=module",
+      "type": "library",
+      "name": "github.com/swaggo/files",
+      "version": "v0.0.0-20220610200504-28940afbdbfe",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2bca473d5a13831149b75957b88cf3397ef366164595d2502bf0a02b1f411487"
+        }
+      ],
+      "purl": "pkg:golang/github.com/swaggo/files@v0.0.0-20220610200504-28940afbdbfe?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/swaggo/files",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/swaggo/http-swagger@v1.3.4?type=module",
+      "type": "library",
+      "name": "github.com/swaggo/http-swagger",
+      "version": "v1.3.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "abbb7f5cbc749f5e47d50f7fb64dd8f4be27db5d17cc91795ad9c35fae1ae70c"
+        }
+      ],
+      "purl": "pkg:golang/github.com/swaggo/http-swagger@v1.3.4?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/swaggo/http-swagger",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/swaggo/swag@v1.8.1?type=module",
+      "type": "library",
+      "name": "github.com/swaggo/swag",
+      "version": "v1.8.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "26e011cc55f56759e36c21b3f99cad051d794c527017643b7eef29b891e14182"
+        }
+      ],
+      "purl": "pkg:golang/github.com/swaggo/swag@v1.8.1?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/swaggo/swag",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/net@v0.7.0?type=module",
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.7.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ac9ad4aaa863b20369ecaa8021cdb9b3da599e353b4d471263b1dc5598dd9f58"
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/net@v0.7.0?goarch=arm64\u0026goos=darwin\u0026type=module"
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.5.0?type=module",
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.5.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3142bf53fe258f5b75a0f8341dfb970cdfd9d70bf7d5927f61c3e219c712e035"
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/sys@v0.5.0?goarch=arm64\u0026goos=darwin\u0026type=module"
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/tools@v0.1.12?type=module",
+      "type": "library",
+      "name": "golang.org/x/tools",
+      "version": "v0.1.12",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "56f7824cadfc036ae44bc66a158db91c80c5b1c5f95fd3a812125ddeab909975"
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/tools@v0.1.12?goarch=arm64\u0026goos=darwin\u0026type=module"
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module",
+      "type": "library",
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0fcc60c04098ec262fc7e6369f8b01cfddc99fd251bf1762cb2a3c0937ee29a6"
+        }
+      ],
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0?goarch=arm64\u0026goos=darwin\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/go-yaml/yaml",
+          "type": "vcs"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:golang/github.com/polyglot-hello@v0.0.0-20260403033242-0b95854f1c8d?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/polyglot-hello/packages/go-greeter@v0.0.0-20260403033242-0b95854f1c8d?type=module",
+        "pkg:golang/github.com/swaggo/http-swagger@v1.3.4?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/KyleBanks/depth@v1.2.1?type=module"
+    },
+    {
+      "ref": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+        "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/go-openapi/spec@v0.20.6?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module",
+        "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?type=module",
+        "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/josharian/intern@v1.0.0?type=module"
+    },
+    {
+      "ref": "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/josharian/intern@v1.0.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/polyglot-hello/packages/go-greeter@v0.0.0-20260403033242-0b95854f1c8d?type=module"
+    },
+    {
+      "ref": "pkg:golang/github.com/swaggo/files@v0.0.0-20220610200504-28940afbdbfe?type=module",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/net@v0.7.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/swaggo/http-swagger@v1.3.4?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/KyleBanks/depth@v1.2.1?type=module",
+        "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module",
+        "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?type=module",
+        "pkg:golang/github.com/go-openapi/spec@v0.20.6?type=module",
+        "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+        "pkg:golang/github.com/josharian/intern@v1.0.0?type=module",
+        "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module",
+        "pkg:golang/github.com/swaggo/files@v0.0.0-20220610200504-28940afbdbfe?type=module",
+        "pkg:golang/github.com/swaggo/swag@v1.8.1?type=module",
+        "pkg:golang/golang.org/x/net@v0.7.0?type=module",
+        "pkg:golang/golang.org/x/sys@v0.5.0?type=module",
+        "pkg:golang/golang.org/x/tools@v0.1.12?type=module",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/swaggo/swag@v1.8.1?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/KyleBanks/depth@v1.2.1?type=module",
+        "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?type=module",
+        "pkg:golang/github.com/go-openapi/jsonreference@v0.20.0?type=module",
+        "pkg:golang/github.com/go-openapi/spec@v0.20.6?type=module",
+        "pkg:golang/github.com/go-openapi/swag@v0.19.15?type=module",
+        "pkg:golang/github.com/josharian/intern@v1.0.0?type=module",
+        "pkg:golang/github.com/mailru/easyjson@v0.7.6?type=module",
+        "pkg:golang/golang.org/x/net@v0.7.0?type=module",
+        "pkg:golang/golang.org/x/sys@v0.5.0?type=module",
+        "pkg:golang/golang.org/x/tools@v0.1.12?type=module",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/net@v0.7.0?type=module",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/sys@v0.5.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/sys@v0.5.0?type=module"
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/tools@v0.1.12?type=module",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/net@v0.7.0?type=module",
+        "pkg:golang/golang.org/x/sys@v0.5.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0?type=module"
+    }
+  ]
+}
