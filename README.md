@@ -225,6 +225,12 @@ Or use Gradle to install dependencies and generate lockfiles for all ecosystems 
 ./gradlew installAll
 ```
 
+## Socket Scan Standard
+
+```bash
+socket scan create --repo polyglot-hello --branch main --default-branch --org <Your_OrgName> . --report
+```
+
 ## Socket Scan Reachability
 
 ```bash
