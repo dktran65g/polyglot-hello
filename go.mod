@@ -10,7 +10,12 @@ replace golang.org/x/crypto v0.32.0 => golang.org/x/crypto v0.45.0
 
 replace golang.org/x/crypto v0.36.0 => golang.org/x/crypto v0.45.0
 
-require github.com/swaggo/http-swagger v1.3.4
+require (
+	github.com/polyglot-hello/packages/go-greeter v0.0.0
+	github.com/swaggo/http-swagger v1.3.4
+)
+
+replace github.com/polyglot-hello/packages/go-greeter => ./packages/go-greeter
 
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect

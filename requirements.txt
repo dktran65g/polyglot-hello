@@ -9,3 +9,4 @@ mkdocs-redirects==1.2.2
 mkdocs-rss-plugin==1.17.9
 pymarkdownlnt==0.9.36
 yamllint==1.38.0
+-e ./packages/py-greeter

@@ -23,6 +23,10 @@ polyglot-hello/
 ├── Cargo.toml                 # Rust (Cargo) dependencies
 ├── go.mod                     # Go module dependencies
 ├── pom.xml                    # Java (Maven) dependencies
+├── packages/
+│   ├── py-greeter/            # Python internal package
+│   ├── node-greeter/          # Node.js internal package
+│   └── go-greeter/            # Go internal package
 ├── src/
 │   └── main/
 │       ├── java/com/polyglot/hello/Hello.java
@@ -108,6 +112,16 @@ Run all hello worlds:
 ### Go
 
 - github.com/swaggo/http-swagger v1.3.4
+
+## Internal/Local Packages
+
+Each ecosystem imports a local package that exports a `greet(name)` function.
+
+| Ecosystem | Package Name | Location | How it's referenced |
+|-----------|-------------|----------|---------------------|
+| Python | `greeter` | `packages/py-greeter/` | `-e ./packages/py-greeter` in `requirements.txt` |
+| Node.js | `@polyglot/greeter` | `packages/node-greeter/` | `"file:packages/node-greeter"` in `package.json` |
+| Go | `go-greeter` | `packages/go-greeter/` | `replace` directive in `go.mod` |
 
 ## Manifests
 
