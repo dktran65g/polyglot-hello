@@ -293,3 +293,50 @@ socket scan create --repo polyglot-hello --branch main --default-branch --org <Y
 ```bash
 socket scan create --reach --repo polyglot-hello --branch main --default-branch --org <Your_OrgName> . --report
 ```
+
+## Steps to Generate and Merge SBOM Files for polyglot-hello
+
+### 1. Install SBOM tools
+
+```bash
+# CycloneDX CLI (for merging)
+brew install cyclonedx/cyclonedx/cyclonedx-cli
+
+# Python
+pip install cyclonedx-bom
+
+# Rust
+cargo install cargo-cyclonedx
+
+# Go
+go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest
+```
+
+### 2. Generate per-ecosystem SBOMs
+
+```bash
+# Python
+cyclonedx-py requirements --of json -o sbom-python.json requirements.txt
+
+# Node.js (npm)
+npx @cyclonedx/cyclonedx-npm --output-file sbom-npm.json
+
+# Rust (Cargo)
+cargo cyclonedx --format json
+# outputs polyglot-hello.cdx.json
+
+# Go
+$(go env GOPATH)/bin/cyclonedx-gomod mod -json -output sbom-go.json
+
+# Java (Maven) - CycloneDX plugin already configured in pom.xml
+mvn package -q -DskipTests
+# outputs target/bom.json
+```
+
+### 3. Merge all SBOMs into one
+
+```bash
+cyclonedx merge \
+  --input-files sbom-python.json sbom-npm.json polyglot-hello.cdx.json sbom-go.json target/bom.json \
+  --output-file sbom-all.json
+```
