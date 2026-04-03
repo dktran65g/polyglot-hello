@@ -225,6 +225,46 @@ Or use Gradle to install dependencies and generate lockfiles for all ecosystems 
 ./gradlew installAll
 ```
 
+## CycloneDX SBOM Generation
+
+Generate SBOMs for each ecosystem using CycloneDX tools.
+
+**Python (PyPI)**
+```bash
+pip install cyclonedx-bom
+cyclonedx-py requirements -i requirements.txt -o sbom-python.json --format json
+```
+
+**Node.js (npm)**
+```bash
+npx @cyclonedx/cyclonedx-npm --output-file sbom-npm.json
+```
+
+**Rust (Cargo)**
+```bash
+cargo install cargo-cyclonedx
+cargo cyclonedx --format json
+# outputs to polyglot-hello.cdx.json
+```
+
+**Go**
+```bash
+go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest
+cyclonedx-gomod mod -json -output sbom-go.json
+```
+
+**Java (Maven)** (already configured in `pom.xml`)
+```bash
+mvn package -DskipTests
+# bom.json is auto-generated in target/
+```
+
+**Merge all into one SBOM**
+```bash
+npm install -g @cyclonedx/cyclonedx-cli
+cyclonedx merge --input-files sbom-python.json sbom-npm.json polyglot-hello.cdx.json sbom-go.json target/bom.json --output-file sbom-all.json
+```
+
 ## Socket Scan Standard
 
 ```bash
