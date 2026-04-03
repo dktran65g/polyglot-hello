@@ -109,6 +109,57 @@ Run all hello worlds:
 
 - github.com/swaggo/http-swagger v1.3.4
 
+## Manifests
+
+Each ecosystem uses a manifest file to declare dependencies.
+
+| Ecosystem | Manifest | How to create |
+|-----------|----------|---------------|
+| Python (PyPI) | `requirements.txt` | Author manually or `pip freeze > requirements.txt` |
+| Node.js (npm) | `package.json` | `npm init -y` then `npm install <pkg> --save` |
+| Rust (Cargo) | `Cargo.toml` | `cargo init` then `cargo add <pkg>` |
+| Go | `go.mod` | `go mod init <module>` then `go get <pkg>@<version>` |
+| Java (Maven) | `pom.xml` | `mvn archetype:generate` or author manually |
+
+### Generating Manifests
+
+**Python (PyPI)** - `requirements.txt`
+```bash
+# Option 1: author manually
+echo "openapi-spec-validator==0.8.4" >> requirements.txt
+
+# Option 2: generate from existing environment
+venv/bin/pip freeze > requirements.txt
+```
+
+**Node.js (npm)** - `package.json`
+```bash
+npm init -y
+npm install react react-dom --save
+# package.json dependencies section is auto-updated
+```
+
+**Rust (Cargo)** - `Cargo.toml`
+```bash
+cargo init
+cargo add serde tokio axum
+# Cargo.toml [dependencies] section is auto-updated
+```
+
+**Go** - `go.mod`
+```bash
+go mod init github.com/your-org/your-project
+go get github.com/swaggo/http-swagger@v1.3.4
+# go.mod require block is auto-updated
+```
+
+**Java (Maven)** - `pom.xml`
+```bash
+mvn archetype:generate -DgroupId=com.polyglot -DartifactId=hello -DarchetypeArtifactId=maven-archetype-quickstart
+# Then add <dependency> blocks to pom.xml manually, or use:
+mvn versions:use-latest-releases
+```
+
 ## Lockfiles
 
 | Ecosystem | Manifest | Lockfile | Format |
