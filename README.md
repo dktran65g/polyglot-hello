@@ -260,9 +260,26 @@ mvn package -DskipTests
 ```
 
 **Merge all into one SBOM**
+
+Install the CycloneDX CLI using one of these methods:
+
 ```bash
-npm install -g @cyclonedx/cyclonedx-cli
-cyclonedx merge --input-files sbom-python.json sbom-npm.json polyglot-hello.cdx.json sbom-go.json target/bom.json --output-file sbom-all.json
+# Option 1: Homebrew (recommended on macOS)
+brew install cyclonedx/cyclonedx/cyclonedx-cli
+
+# Option 2: .NET tool
+dotnet tool install --global CycloneDX.CLI
+
+# Option 3: Docker
+docker run -v $(pwd):/data cyclonedx/cyclonedx-cli merge \
+  --input-files /data/sbom-*.json --output-file /data/sbom-all.json
+```
+
+Then merge all SBOMs:
+```bash
+cyclonedx merge \
+  --input-files sbom-python.json sbom-npm.json polyglot-hello.cdx.json sbom-go.json target/bom.json \
+  --output-file sbom-all.json
 ```
 
 ## Socket Scan Standard
