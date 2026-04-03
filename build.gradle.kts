@@ -70,19 +70,38 @@ tasks.register<Exec>("npmRun") {
 }
 
 // =============================================================================
+// Java (Maven)
+// =============================================================================
+tasks.register<Exec>("mvnPackage") {
+    description = "Build Java project with Maven"
+    commandLine("mvn", "package", "-q", "-DskipTests")
+}
+
+tasks.register<Exec>("mvnRun") {
+    description = "Run Java hello world"
+    dependsOn("mvnPackage")
+    commandLine("java", "-cp", "target/hello-1.0.0.jar", "com.polyglot.hello.Hello")
+}
+
+tasks.register<Exec>("mvnResolve") {
+    description = "Resolve Maven dependencies"
+    commandLine("mvn", "dependency:resolve", "-q")
+}
+
+// =============================================================================
 // Aggregate tasks
 // =============================================================================
 tasks.register("installAll") {
     description = "Install all dependencies across all ecosystems"
-    dependsOn("pythonInstall", "npmInstall", "cargoBuild", "goModTidy")
+    dependsOn("pythonInstall", "npmInstall", "cargoBuild", "goModTidy", "mvnResolve")
 }
 
 tasks.register("runAll") {
     description = "Run hello world in all languages"
-    dependsOn("pythonRun", "goRun", "cargoRun", "npmRun")
+    dependsOn("pythonRun", "goRun", "cargoRun", "npmRun", "mvnRun")
 }
 
 tasks.register("buildAll") {
     description = "Build all language targets"
-    dependsOn("cargoBuild", "goBuild")
+    dependsOn("cargoBuild", "goBuild", "mvnPackage")
 }

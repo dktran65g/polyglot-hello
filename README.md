@@ -1,10 +1,11 @@
 # Polyglot Hello World
 
-A multi-language hello world project orchestrated by Gradle, spanning four ecosystems: Python (PyPI), Node.js (npm), Rust (Cargo), and Go.
+A multi-language hello world project orchestrated by Gradle, spanning five ecosystems: Python (PyPI), Node.js (npm), Rust (Cargo), Go, and Java (Maven).
 
 ## Prerequisites
 
-- **Java 11+** (for Gradle wrapper)
+- **Java 11+** (for Gradle wrapper and Maven)
+- **Maven 3.x**
 - **Python 3.x**
 - **Node.js / npm**
 - **Go 1.23+**
@@ -21,8 +22,10 @@ polyglot-hello/
 ├── package.json               # Node.js (npm) dependencies
 ├── Cargo.toml                 # Rust (Cargo) dependencies
 ├── go.mod                     # Go module dependencies
+├── pom.xml                    # Java (Maven) dependencies
 ├── src/
 │   └── main/
+│       ├── java/com/polyglot/hello/Hello.java
 │       ├── python/hello.py
 │       ├── js/hello.js
 │       └── rs/main.rs
@@ -54,14 +57,17 @@ Run all hello worlds:
 | `goModTidy` | Run `go mod tidy` |
 | `cargoBuild` | Build Rust binary (release) |
 | `cargoRun` | Run Rust hello world |
+| `mvnPackage` | Build Java project with Maven |
+| `mvnRun` | Run Java hello world |
+| `mvnResolve` | Resolve Maven dependencies |
 
 ### Aggregate
 
 | Task | Description |
 |------|-------------|
-| `runAll` | Run hello world in all four languages |
+| `runAll` | Run hello world in all five languages |
 | `installAll` | Install dependencies for all ecosystems |
-| `buildAll` | Build Go and Rust binaries |
+| `buildAll` | Build Go, Rust, and Java binaries |
 
 ## Dependencies
 
@@ -90,6 +96,14 @@ Run all hello worlds:
 - serde 1.0.228, serde_json 1.0.149
 - reqwest 0.13.2, rusqlite 0.39.0
 - clap 4.6.0, chrono 0.4.44, uuid 1.23.0
+
+### Java (Maven)
+
+- com.google.guava:guava 33.4.0-jre
+- org.slf4j:slf4j-api 2.0.17
+- ch.qos.logback:logback-classic 1.5.18
+- com.fasterxml.jackson.core:jackson-databind 2.18.3
+- org.apache.commons:commons-lang3 3.17.0
 
 ### Go
 
