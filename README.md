@@ -210,3 +210,9 @@ Or use Gradle to install dependencies and generate lockfiles for all ecosystems 
 ```bash
 ./gradlew installAll
 ```
+
+## Socket Scan Reachability
+
+```bash
+socket scan create --reach --repo polyglot-hello --branch main --default-branch --org <Your_OrgName> . --report
+```
